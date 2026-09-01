@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dwivediayush662-lang.github.io/studentcareerhub/sitemap.xml
