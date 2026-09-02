@@ -1,6 +1,7 @@
 /* =========================================================
    STUDENTCAREERHUB
    PLACEMENT ELIGIBILITY CHECKER 2026
+   COMPLETE VERSION
    ========================================================= */
 
 
@@ -32,9 +33,15 @@ const improvementList =
    =========================================================
 
    IMPORTANT:
-   These are initial/default calculator rules.
-   Actual company criteria can vary by drive, role,
-   campus and recruitment year.
+   These are calculator/default criteria.
+   Actual company requirements may vary by:
+   - recruitment drive
+   - role
+   - campus
+   - college
+   - recruitment year
+
+   Always verify the official recruitment notification.
 
    ========================================================= */
 
@@ -103,7 +110,11 @@ const companyRules = {
         maxEducationGap: 2
     },
 
-    /* FIXED: CGPA is on a 0–10 scale */
+    /* =====================================================
+       TECH MAHINDRA FIXED
+       CGPA scale is 0–10, NOT 0–100
+       ===================================================== */
+
     "Tech Mahindra": {
         name: "Tech Mahindra",
         minCGPA: 6.0,
@@ -144,9 +155,9 @@ eligibilityForm.addEventListener("submit", function (event) {
 
 function calculateEligibility() {
 
-    /* -----------------------------------------
+    /* =====================================================
        GET USER VALUES
-       ----------------------------------------- */
+       ===================================================== */
 
     const course =
         document.getElementById("course").value;
@@ -182,9 +193,9 @@ function calculateEligibility() {
         document.getElementById("company").value;
 
 
-    /* -----------------------------------------
+    /* =====================================================
        EDUCATION GAP
-       ----------------------------------------- */
+       ===================================================== */
 
     let educationGap = 0;
 
@@ -201,16 +212,23 @@ function calculateEligibility() {
     }
 
 
-    /* -----------------------------------------
-       GET COMPANY RULES
-       ----------------------------------------- */
+    /* =====================================================
+       COMPANY RULES
+       ===================================================== */
 
     const rules = companyRules[company];
 
+    if (!rules) {
 
-    /* -----------------------------------------
-       BASIC VALIDATION
-       ----------------------------------------- */
+        alert("Please select a valid company.");
+
+        return;
+    }
+
+
+    /* =====================================================
+       REQUIRED FIELD VALIDATION
+       ===================================================== */
 
     if (
         !course ||
@@ -232,9 +250,9 @@ function calculateEligibility() {
     }
 
 
-    /* -----------------------------------------
-       VALUE RANGE VALIDATION
-       ----------------------------------------- */
+    /* =====================================================
+       VALUE VALIDATION
+       ===================================================== */
 
     if (tenth < 0 || tenth > 100) {
 
@@ -260,17 +278,25 @@ function calculateEligibility() {
     }
 
 
-    if (activeBacklogs < 0 || clearedBacklogs < 0) {
+    if (activeBacklogs < 0) {
 
-        alert("Backlog values cannot be negative.");
+        alert("Active backlogs cannot be negative.");
 
         return;
     }
 
 
-    /* -----------------------------------------
+    if (clearedBacklogs < 0) {
+
+        alert("Cleared backlogs cannot be negative.");
+
+        return;
+    }
+
+
+    /* =====================================================
        RESULT ARRAYS
-       ----------------------------------------- */
+       ===================================================== */
 
     const failedCriteria = [];
 
@@ -279,9 +305,9 @@ function calculateEligibility() {
     const improvements = [];
 
 
-    /* =================================================
+    /* =====================================================
        10th PERCENTAGE
-       ================================================= */
+       ===================================================== */
 
     if (tenth >= rules.minTenth) {
 
@@ -293,20 +319,22 @@ function calculateEligibility() {
 
     else {
 
+        const shortfall =
+            (rules.minTenth - tenth).toFixed(2);
+
         failedCriteria.push(
-            `10th percentage is ${tenth}%, but minimum required is ${rules.minTenth}%.`
+            `Your 10th percentage is ${tenth}%, but the calculator requirement is ${rules.minTenth}%.`
         );
 
         improvements.push(
-            `Your 10th percentage is below the ${rules.minTenth}% requirement. Look for companies with lower academic cut-offs.`
+            `Your 10th percentage is ${shortfall} percentage point(s) below the calculator requirement.`
         );
-
     }
 
 
-    /* =================================================
+    /* =====================================================
        12th PERCENTAGE
-       ================================================= */
+       ===================================================== */
 
     if (twelfth >= rules.minTwelfth) {
 
@@ -318,20 +346,22 @@ function calculateEligibility() {
 
     else {
 
+        const shortfall =
+            (rules.minTwelfth - twelfth).toFixed(2);
+
         failedCriteria.push(
-            `12th percentage is ${twelfth}%, but minimum required is ${rules.minTwelfth}%.`
+            `Your 12th percentage is ${twelfth}%, but the calculator requirement is ${rules.minTwelfth}%.`
         );
 
         improvements.push(
-            `Your 12th percentage is below the ${rules.minTwelfth}% requirement.`
+            `Your 12th percentage is ${shortfall} percentage point(s) below the calculator requirement.`
         );
-
     }
 
 
-    /* =================================================
+    /* =====================================================
        CGPA
-       ================================================= */
+       ===================================================== */
 
     if (cgpa >= rules.minCGPA) {
 
@@ -347,19 +377,18 @@ function calculateEligibility() {
             (rules.minCGPA - cgpa).toFixed(2);
 
         failedCriteria.push(
-            `Your CGPA is ${cgpa}, but minimum required is ${rules.minCGPA}.`
+            `Your CGPA is ${cgpa}, but the calculator requirement is ${rules.minCGPA}.`
         );
 
         improvements.push(
-            `Your CGPA is ${cgpaShortfall} points below the calculator requirement of ${rules.minCGPA}.`
+            `Your CGPA is ${cgpaShortfall} point(s) below the calculator requirement of ${rules.minCGPA}.`
         );
-
     }
 
 
-    /* =================================================
+    /* =====================================================
        ACTIVE BACKLOGS
-       ================================================= */
+       ===================================================== */
 
     if (
         activeBacklogs <= rules.maxActiveBacklogs
@@ -373,20 +402,22 @@ function calculateEligibility() {
 
     else {
 
+        const extraBacklogs =
+            activeBacklogs - rules.maxActiveBacklogs;
+
         failedCriteria.push(
             `You have ${activeBacklogs} active backlog(s), while the calculator rule allows ${rules.maxActiveBacklogs}.`
         );
 
         improvements.push(
-            `Clear your active backlog(s) before applying to companies with zero-active-backlog criteria.`
+            `Clear ${extraBacklogs} active backlog(s) to meet this calculator criterion.`
         );
-
     }
 
 
-    /* =================================================
+    /* =====================================================
        EDUCATION GAP
-       ================================================= */
+       ===================================================== */
 
     if (
         educationGap <= rules.maxEducationGap
@@ -400,26 +431,56 @@ function calculateEligibility() {
 
     else {
 
+        const gapShortfall =
+            educationGap - rules.maxEducationGap;
+
         failedCriteria.push(
             `Your education gap is ${educationGap} year(s), while the calculator rule allows up to ${rules.maxEducationGap} year(s).`
         );
 
         improvements.push(
-            `Look for recruitment drives that allow a larger education gap.`
+            `Your education gap exceeds the calculator limit by ${gapShortfall} year(s). Check drives with different gap criteria.`
         );
-
     }
 
 
-    /* =================================================
-       FINAL RESULT
-       ================================================= */
+    /* =====================================================
+       ELIGIBILITY SCORE
+       =====================================================
+
+       5 criteria are evaluated:
+
+       10th       = 20 points
+       12th       = 20 points
+       CGPA       = 20 points
+       Backlogs   = 20 points
+       Gap        = 20 points
+
+       Total = 100
+       ===================================================== */
+
+    const totalCriteria = 5;
+
+    const passedCount =
+        passedCriteria.length;
+
+    const failedCount =
+        failedCriteria.length;
+
+    const score =
+        Math.round(
+            (passedCount / totalCriteria) * 100
+        );
+
+
+    /* =====================================================
+       FINAL STATUS
+       ===================================================== */
 
     let status;
     let statusClass;
 
-
-    if (failedCriteria.length === 0) {
+    if (failedCount === 0) {
 
         status =
             "✅ You appear eligible";
@@ -429,7 +490,7 @@ function calculateEligibility() {
 
     }
 
-    else if (failedCriteria.length <= 2) {
+    else if (failedCount <= 2) {
 
         status =
             "⚠️ Check Required";
@@ -446,13 +507,12 @@ function calculateEligibility() {
 
         statusClass =
             "not-eligible";
-
     }
 
 
-    /* =================================================
+    /* =====================================================
        DISPLAY STATUS
-       ================================================= */
+       ===================================================== */
 
     resultStatus.textContent =
         `${status} for ${rules.name}`;
@@ -461,16 +521,100 @@ function calculateEligibility() {
         `pec-status-title ${statusClass}`;
 
 
-    /* =================================================
+    /* =====================================================
        CLEAR OLD RESULTS
-       ================================================= */
+       ===================================================== */
 
     resultDetails.innerHTML = "";
 
 
-    /* =================================================
+    /* =====================================================
+       RESULT SUMMARY
+       ===================================================== */
+
+    const summaryBox =
+        document.createElement("div");
+
+    summaryBox.className =
+        "pec-result-item";
+
+    summaryBox.innerHTML = `
+        <h3>📊 Eligibility Summary</h3>
+
+        <p>
+            <strong>Eligibility Score:</strong>
+            ${score}%
+        </p>
+
+        <p>
+            <strong>Criteria Passed:</strong>
+            ${passedCount} / ${totalCriteria}
+        </p>
+
+        <p>
+            <strong>Criteria to Check:</strong>
+            ${failedCount}
+        </p>
+
+        <p>
+            <strong>Overall Assessment:</strong>
+            ${escapeHTML(
+                failedCount === 0
+                    ? "All calculator criteria are currently met."
+                    : "Some calculator criteria need attention before applying."
+            )}
+        </p>
+    `;
+
+    resultDetails.appendChild(summaryBox);
+
+
+    /* =====================================================
+       WHY RESULT?
+       ===================================================== */
+
+    const whyBox =
+        document.createElement("div");
+
+    whyBox.className =
+        "pec-result-item";
+
+    let whyMessage;
+
+    if (failedCount === 0) {
+
+        whyMessage =
+            `You meet all ${totalCriteria} calculator criteria for ${rules.name}.`;
+
+    }
+
+    else {
+
+        whyMessage =
+            `You meet ${passedCount} out of ${totalCriteria} calculator criteria. ${failedCount} criterion/criteria need to be checked.`;
+    }
+
+    whyBox.innerHTML = `
+        <h3>💡 Why This Result?</h3>
+
+        <p>
+            ${escapeHTML(whyMessage)}
+        </p>
+
+        <p>
+            <small>
+                This result is an informational assessment based on
+                the calculator's default criteria.
+            </small>
+        </p>
+    `;
+
+    resultDetails.appendChild(whyBox);
+
+
+    /* =====================================================
        PROFILE BOX
-       ================================================= */
+       ===================================================== */
 
     const profileBox =
         document.createElement("div");
@@ -500,14 +644,44 @@ function calculateEligibility() {
             <strong>University:</strong>
             ${escapeHTML(university)}
         </p>
+
+        <p>
+            <strong>10th:</strong>
+            ${tenth}%
+        </p>
+
+        <p>
+            <strong>12th:</strong>
+            ${twelfth}%
+        </p>
+
+        <p>
+            <strong>CGPA:</strong>
+            ${cgpa}
+        </p>
+
+        <p>
+            <strong>Active Backlogs:</strong>
+            ${activeBacklogs}
+        </p>
+
+        <p>
+            <strong>Cleared Backlogs:</strong>
+            ${clearedBacklogs}
+        </p>
+
+        <p>
+            <strong>Education Gap:</strong>
+            ${educationGap} year(s)
+        </p>
     `;
 
     resultDetails.appendChild(profileBox);
 
 
-    /* =================================================
+    /* =====================================================
        COMPANY CRITERIA BOX
-       ================================================= */
+       ===================================================== */
 
     const companyBox =
         document.createElement("div");
@@ -546,7 +720,8 @@ function calculateEligibility() {
         <p>
             <small>
                 These are calculator/default criteria.
-                Actual recruitment requirements may vary.
+                Actual recruitment requirements may vary
+                by drive, role, campus, college and year.
             </small>
         </p>
     `;
@@ -554,9 +729,9 @@ function calculateEligibility() {
     resultDetails.appendChild(companyBox);
 
 
-    /* =================================================
+    /* =====================================================
        PASSED CRITERIA
-       ================================================= */
+       ===================================================== */
 
     if (passedCriteria.length > 0) {
 
@@ -571,7 +746,9 @@ function calculateEligibility() {
 
             <ul>
                 ${passedCriteria
-                    .map(item => `<li>${item}</li>`)
+                    .map(item =>
+                        `<li>${escapeHTML(item)}</li>`
+                    )
                     .join("")}
             </ul>
         `;
@@ -580,9 +757,9 @@ function calculateEligibility() {
     }
 
 
-    /* =================================================
+    /* =====================================================
        FAILED CRITERIA
-       ================================================= */
+       ===================================================== */
 
     if (failedCriteria.length > 0) {
 
@@ -597,7 +774,9 @@ function calculateEligibility() {
 
             <ul>
                 ${failedCriteria
-                    .map(item => `<li>${item}</li>`)
+                    .map(item =>
+                        `<li>${escapeHTML(item)}</li>`
+                    )
                     .join("")}
             </ul>
         `;
@@ -606,12 +785,11 @@ function calculateEligibility() {
     }
 
 
-    /* =================================================
+    /* =====================================================
        IMPROVEMENT SECTION
-       ================================================= */
+       ===================================================== */
 
     improvementList.innerHTML = "";
-
 
     if (improvements.length > 0) {
 
@@ -641,16 +819,48 @@ function calculateEligibility() {
     }
 
 
-    /* =================================================
+    /* =====================================================
+       SUCCESS MESSAGE
+       ===================================================== */
+
+    if (failedCount === 0) {
+
+        const successBox =
+            document.createElement("div");
+
+        successBox.className =
+            "pec-result-item";
+
+        successBox.innerHTML = `
+            <h3>🎉 Good News!</h3>
+
+            <p>
+                Your profile meets all the calculator criteria
+                currently selected for ${escapeHTML(rules.name)}.
+            </p>
+
+            <p>
+                <small>
+                    Always verify the latest official recruitment
+                    notification before applying.
+                </small>
+            </p>
+        `;
+
+        resultDetails.appendChild(successBox);
+    }
+
+
+    /* =====================================================
        SHOW RESULT
-       ================================================= */
+       ===================================================== */
 
     resultSection.hidden = false;
 
 
-    /* =================================================
+    /* =====================================================
        SCROLL TO RESULT
-       ================================================= */
+       ===================================================== */
 
     resultSection.scrollIntoView({
         behavior: "smooth",
