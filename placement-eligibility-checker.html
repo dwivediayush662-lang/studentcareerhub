@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Eligibility Checker 2026 | StudentCareerHub</title>
+
+    <meta name="description"
+          content="Check your placement eligibility based on CGPA, backlogs, education gap, academic percentages and company requirements.">
+
+    <meta name="keywords"
+          content="placement eligibility checker, company eligibility checker, placement eligibility calculator, BTech placement eligibility, CGPA placement eligibility, backlog placement eligibility">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet"
+          href="placement-eligibility-checker.css">
+</head>
+
+<body class="pec-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="pec-header">
+
+        <div class="pec-container pec-header-inner">
+
+            <a href="index.html"
+               class="pec-logo">
+                Student<span>CareerHub</span>
+            </a>
+
+            <nav class="pec-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="hr-interview-questions.html">
+                    HR Interview
+                </a>
+
+                <a href="java-interview-questions.html">
+                    Java
+                </a>
+
+                <a href="ai-tools-for-students.html">
+                    AI Tools
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="pec-hero">
+
+            <div class="pec-container">
+
+                <span class="pec-badge">
+                    🎯 Free Placement Tool
+                </span>
+
+                <h1>
+                    Placement Eligibility Checker 2026
+                </h1>
+
+                <p class="pec-hero-description">
+                    Check whether you are eligible for a company's
+                    placement requirements based on your academic
+                    profile, CGPA, backlogs and other criteria.
+                </p>
+
+                <p class="pec-hero-note">
+                    Enter your details below to get a personalized
+                    eligibility result.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHECKER ================= -->
+
+        <section class="pec-checker-section">
+
+            <div class="pec-container">
+
+                <div class="pec-card">
+
+                    <div class="pec-section-heading">
+
+                        <h2>
+                            Check Your Placement Eligibility
+                        </h2>
+
+                        <p>
+                            Enter your academic details accurately.
+                        </p>
+
+                    </div>
+
+
+                    <form id="eligibilityForm">
+
+
+                        <!-- ===== PERSONAL / EDUCATION ===== -->
+
+                        <fieldset class="pec-fieldset">
+
+                            <legend>
+                                🎓 Education Details
+                            </legend>
+
+                            <div class="pec-form-grid">
+
+
+                                <!-- Course -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="course">
+                                        Course
+                                    </label>
+
+                                    <select id="course"
+                                            required>
+
+                                        <option value="">
+                                            Select Course
+                                        </option>
+
+                                        <option value="B.Tech">
+                                            B.Tech
+                                        </option>
+
+                                        <option value="B.E">
+                                            B.E
+                                        </option>
+
+                                        <option value="BCA">
+                                            BCA
+                                        </option>
+
+                                        <option value="MCA">
+                                            MCA
+                                        </option>
+
+                                        <option value="B.Sc">
+                                            B.Sc
+                                        </option>
+
+                                        <option value="M.Tech">
+                                            M.Tech
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Branch -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="branch">
+                                        Branch
+                                    </label>
+
+                                    <select id="branch"
+                                            required>
+
+                                        <option value="">
+                                            Select Branch
+                                        </option>
+
+                                        <option value="CSE">
+                                            Computer Science
+                                        </option>
+
+                                        <option value="IT">
+                                            Information Technology
+                                        </option>
+
+                                        <option value="ECE">
+                                            Electronics & Communication
+                                        </option>
+
+                                        <option value="EEE">
+                                            Electrical Engineering
+                                        </option>
+
+                                        <option value="ME">
+                                            Mechanical Engineering
+                                        </option>
+
+                                        <option value="Civil">
+                                            Civil Engineering
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Graduation Year -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="graduationYear">
+                                        Graduation Year
+                                    </label>
+
+                                    <select id="graduationYear"
+                                            required>
+
+                                        <option value="">
+                                            Select Year
+                                        </option>
+
+                                        <option value="2026">
+                                            2026
+                                        </option>
+
+                                        <option value="2027">
+                                            2027
+                                        </option>
+
+                                        <option value="2028">
+                                            2028
+                                        </option>
+
+                                        <option value="2029">
+                                            2029
+                                        </option>
+
+                                        <option value="2030">
+                                            2030
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- University -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="university">
+                                        University
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="university"
+                                        placeholder="e.g. RGPV / DAVV"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- ===== ACADEMIC DETAILS ===== -->
+
+                        <fieldset class="pec-fieldset">
+
+                            <legend>
+                                📊 Academic Details
+                            </legend>
+
+                            <div class="pec-form-grid">
+
+
+                                <!-- 10th -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="tenth">
+                                        10th Percentage
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="tenth"
+                                        min="0"
+                                        max="100"
+                                        step="0.01"
+                                        placeholder="e.g. 75"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- 12th -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="twelfth">
+                                        12th Percentage
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="twelfth"
+                                        min="0"
+                                        max="100"
+                                        step="0.01"
+                                        placeholder="e.g. 72"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- CGPA -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="cgpa">
+                                        Current CGPA
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="cgpa"
+                                        min="0"
+                                        max="10"
+                                        step="0.01"
+                                        placeholder="e.g. 7.5"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- ===== BACKLOG DETAILS ===== -->
+
+                        <fieldset class="pec-fieldset">
+
+                            <legend>
+                                📚 Backlog & Gap Details
+                            </legend>
+
+                            <div class="pec-form-grid">
+
+
+                                <!-- Active Backlogs -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="activeBacklogs">
+                                        Active Backlogs
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="activeBacklogs"
+                                        min="0"
+                                        value="0"
+                                        required
+                                    >
+
+                                    <small>
+                                        Subjects currently not cleared
+                                    </small>
+
+                                </div>
+
+
+                                <!-- Cleared Backlogs -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="clearedBacklogs">
+                                        Cleared Backlogs
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="clearedBacklogs"
+                                        min="0"
+                                        value="0"
+                                        required
+                                    >
+
+                                    <small>
+                                        Previous backlogs already cleared
+                                    </small>
+
+                                </div>
+
+
+                                <!-- Education Gap -->
+
+                                <div class="pec-form-group">
+
+                                    <label for="educationGap">
+                                        Education Gap
+                                    </label>
+
+                                    <select id="educationGap"
+                                            required>
+
+                                        <option value="">
+                                            Select
+                                        </option>
+
+                                        <option value="0">
+                                            No Gap
+                                        </option>
+
+                                        <option value="1">
+                                            1 Year
+                                        </option>
+
+                                        <option value="2">
+                                            2 Years
+                                        </option>
+
+                                        <option value="3+">
+                                            3+ Years
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- ===== COMPANY ===== -->
+
+                        <fieldset class="pec-fieldset">
+
+                            <legend>
+                                🏢 Company
+                            </legend>
+
+                            <div class="pec-form-grid">
+
+                                <div class="pec-form-group">
+
+                                    <label for="company">
+                                        Select Company
+                                    </label>
+
+                                    <select id="company"
+                                            required>
+
+                                        <option value="">
+                                            Select Company
+                                        </option>
+
+                                        <option value="TCS">
+                                            TCS
+                                        </option>
+
+                                        <option value="Infosys">
+                                            Infosys
+                                        </option>
+
+                                        <option value="Wipro">
+                                            Wipro
+                                        </option>
+
+                                        <option value="Accenture">
+                                            Accenture
+                                        </option>
+
+                                        <option value="Cognizant">
+                                            Cognizant
+                                        </option>
+
+                                        <option value="Capgemini">
+                                            Capgemini
+                                        </option>
+
+                                        <option value="HCL">
+                                            HCLTech
+                                        </option>
+
+                                        <option value="Tech Mahindra">
+                                            Tech Mahindra
+                                        </option>
+
+                                        <option value="Other">
+                                            Other / Not Listed
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- ===== BUTTON ===== -->
+
+                        <button
+                            type="submit"
+                            class="pec-check-button">
+
+                            🔍 Check My Eligibility
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESULT ================= -->
+
+        <section
+            id="resultSection"
+            class="pec-result-section"
+            hidden>
+
+            <div class="pec-container">
+
+                <div class="pec-result-card">
+
+
+                    <h2 id="resultStatus"
+                        class="pec-status-title">
+                    </h2>
+
+
+                    <div id="resultDetails">
+                    </div>
+
+
+                    <div
+                        id="improvementSection"
+                        class="pec-improvement-section">
+
+                        <h3>
+                            💡 What You Can Improve
+                        </h3>
+
+                        <ul id="improvementList">
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= INFORMATION ================= -->
+
+        <section class="pec-info-section">
+
+            <div class="pec-container">
+
+                <div class="pec-section-heading">
+
+                    <h2>
+                        How Placement Eligibility Works
+                    </h2>
+
+                    <p>
+                        Companies may consider multiple factors
+                        before allowing students to participate
+                        in placement drives.
+                    </p>
+
+                </div>
+
+
+                <div class="pec-info-grid">
+
+
+                    <div class="pec-info-item">
+
+                        <h3>
+                            📈 CGPA
+                        </h3>
+
+                        <p>
+                            Some companies specify a minimum CGPA
+                            requirement for placement eligibility.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pec-info-item">
+
+                        <h3>
+                            📚 Backlogs
+                        </h3>
+
+                        <p>
+                            Companies may restrict active backlogs
+                            during the selection process.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pec-info-item">
+
+                        <h3>
+                            📝 Academic Percentage
+                        </h3>
+
+                        <p>
+                            10th and 12th percentage requirements
+                            may also be considered.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pec-info-item">
+
+                        <h3>
+                            🎓 Education Gap
+                        </h3>
+
+                        <p>
+                            Certain recruitment drives may have
+                            restrictions related to education gaps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pec-disclaimer">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    Placement eligibility criteria can change
+                    depending on the company, role, recruitment
+                    drive, college and year. Always verify the
+                    final eligibility criteria from the official
+                    company notification.
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="pec-footer">
+
+        <div class="pec-container">
+
+            <p>
+                © 2026 StudentCareerHub.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Placement Eligibility Checker
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="placement-eligibility-checker.js"></script>
+
+</body>
+</html>

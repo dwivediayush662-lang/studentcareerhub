@@ -1,0 +1,523 @@
+/* =========================================================
+   STUDENTCAREERHUB
+   PLACEMENT ELIGIBILITY CHECKER CSS
+   ========================================================= */
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+.pec-page {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.pec-page *,
+.pec-page *::before,
+.pec-page *::after {
+    box-sizing: border-box;
+}
+
+.pec-container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.pec-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.pec-header-inner {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.pec-logo {
+    text-decoration: none;
+    color: #111827;
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.pec-logo span {
+    color: #2563eb;
+}
+
+.pec-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pec-nav a {
+    color: #374151;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.pec-nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.pec-hero {
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff
+    );
+
+    padding: 75px 0 65px;
+    text-align: center;
+}
+
+.pec-badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pec-hero h1 {
+    margin: 0 auto 18px;
+    max-width: 850px;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    color: #111827;
+}
+
+.pec-hero-description {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.pec-hero-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   CHECKER SECTION
+   ========================= */
+
+.pec-checker-section {
+    padding: 60px 0;
+}
+
+.pec-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.pec-section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pec-section-heading h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: #111827;
+}
+
+.pec-section-heading p {
+    margin: 0;
+    color: #6b7280;
+}
+
+
+/* =========================
+   FIELDSET
+   ========================= */
+
+.pec-fieldset {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 0 0 25px;
+    background: #fafafa;
+}
+
+.pec-fieldset legend {
+    padding: 0 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.pec-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.pec-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pec-form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.pec-form-group input,
+.pec-form-group select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.pec-form-group input:focus,
+.pec-form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.pec-form-group small {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   CHECK BUTTON
+   ========================= */
+
+.pec-check-button {
+    width: 100%;
+    min-height: 54px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 5px;
+}
+
+.pec-check-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.pec-check-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESULT SECTION
+   ========================= */
+
+.pec-result-section {
+    padding: 0 0 60px;
+}
+
+.pec-result-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+.pec-status-title {
+    text-align: center;
+    margin: 0 0 30px;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 27px;
+}
+
+
+/* =========================
+   RESULT STATUS
+   ========================= */
+
+.pec-status-title.eligible {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pec-status-title.check-required {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.pec-status-title.not-eligible {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================
+   RESULT ITEMS
+   ========================= */
+
+.pec-result-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+}
+
+.pec-result-item h3 {
+    margin: 0 0 15px;
+    font-size: 19px;
+    color: #111827;
+}
+
+.pec-result-item p {
+    margin: 7px 0;
+    color: #4b5563;
+}
+
+.pec-result-item ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.pec-result-item li {
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+
+/* =========================
+   IMPROVEMENT SECTION
+   ========================= */
+
+.pec-improvement-section {
+    margin-top: 25px;
+    padding: 25px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+}
+
+.pec-improvement-section h3 {
+    margin: 0 0 15px;
+    color: #1e40af;
+}
+
+.pec-improvement-section ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.pec-improvement-item {
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+
+/* =========================
+   INFORMATION SECTION
+   ========================= */
+
+.pec-info-section {
+    padding: 70px 0;
+    background: #ffffff;
+}
+
+.pec-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.pec-info-item {
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.pec-info-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.pec-info-item h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #111827;
+}
+
+.pec-info-item p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================
+   DISCLAIMER
+   ========================= */
+
+.pec-disclaimer {
+    margin-top: 35px;
+    padding: 20px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    color: #7c2d12;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.pec-footer {
+    background: #111827;
+    color: #d1d5db;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.pec-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .pec-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pec-nav {
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .pec-header-inner {
+        flex-direction: column;
+        padding: 18px 0;
+    }
+
+    .pec-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pec-hero {
+        padding: 55px 0 45px;
+    }
+
+    .pec-card,
+    .pec-result-card {
+        padding: 22px;
+    }
+
+    .pec-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pec-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pec-section-heading h2 {
+        font-size: 25px;
+    }
+
+    .pec-status-title {
+        font-size: 22px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .pec-container {
+        width: 94%;
+    }
+
+    .pec-hero h1 {
+        font-size: 32px;
+    }
+
+    .pec-hero-description {
+        font-size: 16px;
+    }
+
+    .pec-fieldset {
+        padding: 18px;
+    }
+
+    .pec-fieldset legend {
+        font-size: 16px;
+    }
+
+    .pec-check-button {
+        font-size: 15px;
+    }
+
+}
