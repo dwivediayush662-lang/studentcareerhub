@@ -32,11 +32,10 @@ const improvementList =
    =========================================================
 
    IMPORTANT:
-   These are initial/default rules for the calculator.
+   These are initial/default calculator rules.
    Actual company criteria can vary by drive, role,
    campus and recruitment year.
 
-   We will improve this database later.
    ========================================================= */
 
 const companyRules = {
@@ -104,9 +103,10 @@ const companyRules = {
         maxEducationGap: 2
     },
 
+    /* FIXED: CGPA is on a 0–10 scale */
     "Tech Mahindra": {
         name: "Tech Mahindra",
-        minCGPA: 60,
+        minCGPA: 6.0,
         minTenth: 60,
         minTwelfth: 60,
         maxActiveBacklogs: 0,
@@ -209,7 +209,7 @@ function calculateEligibility() {
 
 
     /* -----------------------------------------
-       VALIDATION
+       BASIC VALIDATION
        ----------------------------------------- */
 
     if (
@@ -233,7 +233,43 @@ function calculateEligibility() {
 
 
     /* -----------------------------------------
-       CHECK EACH ELIGIBILITY CONDITION
+       VALUE RANGE VALIDATION
+       ----------------------------------------- */
+
+    if (tenth < 0 || tenth > 100) {
+
+        alert("10th percentage must be between 0 and 100.");
+
+        return;
+    }
+
+
+    if (twelfth < 0 || twelfth > 100) {
+
+        alert("12th percentage must be between 0 and 100.");
+
+        return;
+    }
+
+
+    if (cgpa < 0 || cgpa > 10) {
+
+        alert("CGPA must be between 0 and 10.");
+
+        return;
+    }
+
+
+    if (activeBacklogs < 0 || clearedBacklogs < 0) {
+
+        alert("Backlog values cannot be negative.");
+
+        return;
+    }
+
+
+    /* -----------------------------------------
+       RESULT ARRAYS
        ----------------------------------------- */
 
     const failedCriteria = [];
@@ -243,9 +279,9 @@ function calculateEligibility() {
     const improvements = [];
 
 
-    /* =========================================
+    /* =================================================
        10th PERCENTAGE
-       ========================================= */
+       ================================================= */
 
     if (tenth >= rules.minTenth) {
 
@@ -262,15 +298,15 @@ function calculateEligibility() {
         );
 
         improvements.push(
-            `Your 10th percentage is below the ${rules.minTenth}% requirement. Check companies with lower academic cut-offs.`
+            `Your 10th percentage is below the ${rules.minTenth}% requirement. Look for companies with lower academic cut-offs.`
         );
 
     }
 
 
-    /* =========================================
+    /* =================================================
        12th PERCENTAGE
-       ========================================= */
+       ================================================= */
 
     if (twelfth >= rules.minTwelfth) {
 
@@ -293,9 +329,9 @@ function calculateEligibility() {
     }
 
 
-    /* =========================================
+    /* =================================================
        CGPA
-       ========================================= */
+       ================================================= */
 
     if (cgpa >= rules.minCGPA) {
 
@@ -307,20 +343,23 @@ function calculateEligibility() {
 
     else {
 
+        const cgpaShortfall =
+            (rules.minCGPA - cgpa).toFixed(2);
+
         failedCriteria.push(
             `Your CGPA is ${cgpa}, but minimum required is ${rules.minCGPA}.`
         );
 
         improvements.push(
-            `Improve your CGPA to at least ${rules.minCGPA}.`
+            `Your CGPA is ${cgpaShortfall} points below the calculator requirement of ${rules.minCGPA}.`
         );
 
     }
 
 
-    /* =========================================
+    /* =================================================
        ACTIVE BACKLOGS
-       ========================================= */
+       ================================================= */
 
     if (
         activeBacklogs <= rules.maxActiveBacklogs
@@ -335,7 +374,7 @@ function calculateEligibility() {
     else {
 
         failedCriteria.push(
-            `You have ${activeBacklogs} active backlog(s), while the current calculator rule allows ${rules.maxActiveBacklogs}.`
+            `You have ${activeBacklogs} active backlog(s), while the calculator rule allows ${rules.maxActiveBacklogs}.`
         );
 
         improvements.push(
@@ -345,9 +384,9 @@ function calculateEligibility() {
     }
 
 
-    /* =========================================
+    /* =================================================
        EDUCATION GAP
-       ========================================= */
+       ================================================= */
 
     if (
         educationGap <= rules.maxEducationGap
@@ -372,9 +411,9 @@ function calculateEligibility() {
     }
 
 
-    /* =========================================
-       DETERMINE FINAL RESULT
-       ========================================= */
+    /* =================================================
+       FINAL RESULT
+       ================================================= */
 
     let status;
     let statusClass;
@@ -418,21 +457,20 @@ function calculateEligibility() {
     resultStatus.textContent =
         `${status} for ${rules.name}`;
 
-
     resultStatus.className =
         `pec-status-title ${statusClass}`;
 
 
     /* =================================================
-       BUILD RESULT DETAILS
+       CLEAR OLD RESULTS
        ================================================= */
 
     resultDetails.innerHTML = "";
 
 
-    /* -----------------------------------------
-       BASIC PROFILE
-       ----------------------------------------- */
+    /* =================================================
+       PROFILE BOX
+       ================================================= */
 
     const profileBox =
         document.createElement("div");
@@ -467,9 +505,9 @@ function calculateEligibility() {
     resultDetails.appendChild(profileBox);
 
 
-    /* -----------------------------------------
-       COMPANY RULE
-       ----------------------------------------- */
+    /* =================================================
+       COMPANY CRITERIA BOX
+       ================================================= */
 
     const companyBox =
         document.createElement("div");
@@ -478,7 +516,7 @@ function calculateEligibility() {
         "pec-result-item";
 
     companyBox.innerHTML = `
-        <h3>🏢 ${rules.name} Criteria</h3>
+        <h3>🏢 ${escapeHTML(rules.name)} Criteria</h3>
 
         <p>
             <strong>Minimum CGPA:</strong>
@@ -504,14 +542,21 @@ function calculateEligibility() {
             <strong>Maximum Education Gap:</strong>
             ${rules.maxEducationGap} year(s)
         </p>
+
+        <p>
+            <small>
+                These are calculator/default criteria.
+                Actual recruitment requirements may vary.
+            </small>
+        </p>
     `;
 
     resultDetails.appendChild(companyBox);
 
 
-    /* -----------------------------------------
+    /* =================================================
        PASSED CRITERIA
-       ----------------------------------------- */
+       ================================================= */
 
     if (passedCriteria.length > 0) {
 
@@ -535,9 +580,9 @@ function calculateEligibility() {
     }
 
 
-    /* -----------------------------------------
+    /* =================================================
        FAILED CRITERIA
-       ----------------------------------------- */
+       ================================================= */
 
     if (failedCriteria.length > 0) {
 
@@ -617,15 +662,11 @@ function calculateEligibility() {
 
 /* =========================================================
    SECURITY HELPER
-   =========================================================
-
-   Prevents user-entered university text from being
-   interpreted as HTML.
    ========================================================= */
 
 function escapeHTML(value) {
 
-    return value
+    return String(value)
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
