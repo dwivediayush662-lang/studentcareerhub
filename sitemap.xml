@@ -1,22 +1,15 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- ================= HOMEPAGE ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/</loc>
     </url>
 
-
-    <!-- ================= HR INTERVIEW ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/hr-interview-questions.html</loc>
     </url>
-
-
-    <!-- ================= JAVA INTERVIEW ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/java-interview-questions.html</loc>
@@ -26,95 +19,57 @@
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/java-interview-questions-2026.html</loc>
     </url>
 
-
-    <!-- ================= SQL INTERVIEW ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/sql-interview-questions-2026.html</loc>
     </url>
-
-
-    <!-- ================= PYTHON INTERVIEW ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/python-interview-questions-2026.html</loc>
     </url>
 
-
-    <!-- ================= JAVASCRIPT INTERVIEW ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/javascript-interview-questions-2026.html</loc>
     </url>
-
-
-    <!-- ================= HTML CSS INTERVIEW ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/html-css-interview-questions-2026.html</loc>
     </url>
 
-
-    <!-- ================= REACT.JS INTERVIEW ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/reactjs-interview-questions-2026.html</loc>
     </url>
-
-
-    <!-- ================= NODE.JS INTERVIEW ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/nodejs-interview-questions-2026.html</loc>
     </url>
 
-
-    <!-- ================= GIT & GITHUB ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/git-github-interview-questions-2026.html</loc>
     </url>
-
-
-    <!-- ================= AWS CLOUD ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html</loc>
     </url>
 
-
-    <!-- ================= AI TOOLS ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/ai-tools-for-students.html</loc>
     </url>
-
-
-    <!-- ================= ATS RESUME ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/ats-friendly-resume.html</loc>
     </url>
 
-
-    <!-- ================= CAREER SKILLS ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/skills-for-freshers-2026.html</loc>
     </url>
 
-
-    <!-- ================= PLACEMENT ELIGIBILITY ================= -->
-
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/placement-eligibility-checker.html</loc>
     </url>
-
-
-    <!-- ================= PLACEMENT PREPARATION ================= -->
 
     <url>
         <loc>https://dwivediayush662-lang.github.io/studentcareerhub/placement-preparation-roadmap.html</loc>
     </url>
 
 </urlset>
+
