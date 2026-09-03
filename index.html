@@ -11,32 +11,26 @@
     <meta name="google-site-verification"
         content="4oYXq6Z_dn-Oo9JOSTXt0IVfnlADn9JGjfWMFpP42fE">
 
-    <!-- SEO Title -->
-    <title>StudentCareerHub - Jobs, Coding, AI Tools & Career Guidance for Students</title>
+    <!-- ================= PRIMARY SEO ================= -->
 
-    <!-- SEO Description -->
+    <title>StudentCareerHub | Jobs, Coding & Career Guidance</title>
+
     <meta name="description"
-        content="StudentCareerHub helps students and freshers find jobs and internships, learn coding, explore AI tools, create ATS-friendly resumes and prepare for interviews in 2026.">
+        content="Find jobs, internships, coding tutorials, AI tools, resume tips and interview preparation for students and freshers in 2026.">
 
-    <!-- SEO Keywords -->
-    <meta name="keywords"
-        content="StudentCareerHub, jobs for freshers, internships for students, coding tutorials, Java interview questions, SQL interview questions, AI tools for students, ATS resume, interview preparation">
+    <meta name="author"
+        content="StudentCareerHub">
 
-    <!-- Author -->
-    <meta name="author" content="StudentCareerHub">
-
-    <!-- Search Engine Robots -->
     <meta name="robots"
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <!-- Canonical URL -->
     <link rel="canonical"
         href="https://dwivediayush662-lang.github.io/studentcareerhub/">
 
     <!-- ================= OPEN GRAPH ================= -->
 
     <meta property="og:title"
-        content="StudentCareerHub - Jobs, Coding, AI Tools & Career Guidance">
+        content="StudentCareerHub | Jobs, Coding & Career Guidance">
 
     <meta property="og:description"
         content="Find jobs, internships, coding resources, AI tools, resume tips and interview preparation for students and freshers.">
@@ -59,11 +53,10 @@
         content="summary">
 
     <meta name="twitter:title"
-        content="StudentCareerHub - Career Guidance for Students & Freshers">
+        content="StudentCareerHub | Jobs, Coding & Career Guidance">
 
     <meta name="twitter:description"
         content="Jobs, internships, coding, AI tools, resume tips and interview preparation for students and freshers.">
-
 
     <!-- ================= STRUCTURED DATA ================= -->
 
@@ -73,16 +66,9 @@
       "@type": "WebSite",
       "name": "StudentCareerHub",
       "url": "https://dwivediayush662-lang.github.io/studentcareerhub/",
-      "description": "StudentCareerHub helps students and freshers with jobs, internships, coding, AI tools, resumes and interview preparation.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://dwivediayush662-lang.github.io/studentcareerhub/?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "description": "StudentCareerHub helps students and freshers with jobs, internships, coding, AI tools, resumes and interview preparation."
     }
     </script>
-
-    <!-- ================= ORGANIZATION STRUCTURED DATA ================= -->
 
     <script type="application/ld+json">
     {
@@ -95,6 +81,296 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ================= AI ASSISTANT STYLE ================= -->
+
+    <style>
+
+        .ai-assistant-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #f8fbff, #eef5ff);
+        }
+
+        .ai-assistant-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .ai-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .ai-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .ai-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .ai-chat-box {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.10);
+            overflow: hidden;
+            border: 1px solid #e5eaf2;
+        }
+
+        .ai-chat-header {
+            padding: 18px 22px;
+            background: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ai-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ai-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2563eb;
+            font-size: 21px;
+        }
+
+        .ai-brand h3 {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .ai-status {
+            margin: 3px 0 0;
+            font-size: 12px;
+            opacity: .75;
+        }
+
+        .clear-chat {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,.3);
+            color: white;
+            border-radius: 8px;
+            padding: 7px 12px;
+            cursor: pointer;
+        }
+
+        .clear-chat:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+        .ai-messages {
+            height: 420px;
+            overflow-y: auto;
+            padding: 22px;
+            background: #f9fafb;
+        }
+
+        .ai-message {
+            display: flex;
+            margin-bottom: 18px;
+        }
+
+        .ai-message.user {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            max-width: 78%;
+            padding: 13px 16px;
+            border-radius: 16px;
+            line-height: 1.55;
+            font-size: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .ai-message.assistant .message-bubble {
+            background: white;
+            color: #1f2937;
+            border: 1px solid #e5e7eb;
+            border-bottom-left-radius: 5px;
+        }
+
+        .ai-message.user .message-bubble {
+            background: #2563eb;
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .ai-welcome {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .ai-welcome-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .ai-welcome h3 {
+            margin-bottom: 8px;
+        }
+
+        .ai-welcome p {
+            color: #6b7280;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .ai-suggestions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .ai-suggestion {
+            background: white;
+            border: 1px solid #dbe3ef;
+            border-radius: 20px;
+            padding: 8px 13px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .ai-suggestion:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .ai-input-area {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .ai-input-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        #aiInput {
+            flex: 1;
+            border: 1px solid #d1d5db;
+            border-radius: 13px;
+            padding: 13px 15px;
+            font-size: 15px;
+            outline: none;
+            resize: none;
+            font-family: inherit;
+        }
+
+        #aiInput:focus {
+            border-color: #2563eb;
+        }
+
+        #aiSendButton {
+            border: none;
+            border-radius: 13px;
+            padding: 0 20px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        #aiSendButton:hover {
+            background: #1d4ed8;
+        }
+
+        #aiSendButton:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+        .typing {
+            display: inline-flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .typing span {
+            width: 7px;
+            height: 7px;
+            background: #777;
+            border-radius: 50%;
+            animation: typingAnimation 1.2s infinite;
+        }
+
+        .typing span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .typing span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+        @keyframes typingAnimation {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: .5;
+            }
+
+            30% {
+                transform: translateY(-5px);
+                opacity: 1;
+            }
+        }
+
+        .ai-error {
+            color: #b91c1c;
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+        }
+
+        @media (max-width: 600px) {
+
+            .ai-assistant-section {
+                padding: 45px 12px;
+            }
+
+            .ai-title h2 {
+                font-size: 27px;
+            }
+
+            .ai-messages {
+                height: 400px;
+                padding: 15px;
+            }
+
+            .message-bubble {
+                max-width: 88%;
+                font-size: 14px;
+            }
+
+            .ai-input-form {
+                gap: 7px;
+            }
+
+            #aiSendButton {
+                padding: 0 14px;
+            }
+
+            .clear-chat {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -113,33 +389,13 @@
 
         <ul class="nav-links">
 
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#jobs">Jobs</a>
-            </li>
-
-            <li>
-                <a href="#study">Study</a>
-            </li>
-
-            <li>
-                <a href="#coding">Coding</a>
-            </li>
-
-            <li>
-                <a href="#ai">AI Tools</a>
-            </li>
-
-            <li>
-                <a href="#resume">Resume</a>
-            </li>
-
-            <li>
-                <a href="#interview">Interview</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#study">Study</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#ai">AI Tools</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#interview">Interview</a></li>
 
         </ul>
 
@@ -168,23 +424,27 @@
             jobs, learn coding, use AI tools and prepare for interviews.
         </p>
 
-
-        <!-- SEARCH -->
+        <!-- SEARCH / AI -->
 
         <div class="search-box">
 
             <input
                 type="text"
                 id="searchInput"
-                placeholder="Search jobs, coding, AI, resume..."
+                placeholder="Ask StudentCareerHub AI anything..."
+                autocomplete="off"
             >
 
             <button onclick="searchContent()">
-                🔍 Search
+                🤖 Ask AI
             </button>
 
         </div>
 
+        <p style="font-size:13px; margin-top:10px; opacity:.75;">
+            Try: "How can I prepare for a Java interview?" or
+            "Make me a 30-day placement plan."
+        </p>
 
         <div class="hero-buttons">
 
@@ -203,6 +463,135 @@
 </section>
 
 
+<!-- ================= AI ASSISTANT ================= -->
+
+<section id="studentcareerhub-ai" class="ai-assistant-section">
+
+    <div class="ai-assistant-container">
+
+        <div class="ai-title">
+
+            <h2>
+                🤖 StudentCareerHub AI
+            </h2>
+
+            <p>
+                Ask questions about career, coding, resume, interviews,
+                study, English communication and more.
+            </p>
+
+        </div>
+
+        <div class="ai-chat-box">
+
+            <div class="ai-chat-header">
+
+                <div class="ai-brand">
+
+                    <div class="ai-icon">
+                        🤖
+                    </div>
+
+                    <div>
+                        <h3>StudentCareerHub AI</h3>
+
+                        <p class="ai-status">
+                            AI Career & Learning Assistant
+                        </p>
+                    </div>
+
+                </div>
+
+                <button
+                    class="clear-chat"
+                    onclick="clearChat()">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div id="aiMessages" class="ai-messages">
+
+                <div class="ai-welcome">
+
+                    <div class="ai-welcome-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        How can I help you today?
+                    </h3>
+
+                    <p>
+                        Ask me anything about your career, resume,
+                        coding, interviews, study or English communication.
+                    </p>
+
+                    <div class="ai-suggestions">
+
+                        <button
+                            class="ai-suggestion"
+                            onclick="useSuggestion('How should I prepare for a Java interview?')">
+                            ☕ Java Interview
+                        </button>
+
+                        <button
+                            class="ai-suggestion"
+                            onclick="useSuggestion('Create a 30-day placement preparation plan for me.')">
+                            🎯 Placement Plan
+                        </button>
+
+                        <button
+                            class="ai-suggestion"
+                            onclick="useSuggestion('How can I improve my English communication for interviews?')">
+                            🗣️ English
+                        </button>
+
+                        <button
+                            class="ai-suggestion"
+                            onclick="useSuggestion('How can I make my resume ATS friendly?')">
+                            📄 Resume
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-input-area">
+
+                <form
+                    class="ai-input-form"
+                    onsubmit="sendAIMessage(event)">
+
+                    <input
+                        type="text"
+                        id="aiInput"
+                        placeholder="Ask anything..."
+                        autocomplete="off"
+                        maxlength="12000"
+                    >
+
+                    <button
+                        type="submit"
+                        id="aiSendButton">
+                        Send
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- ================= CATEGORIES ================= -->
 
 <section id="categories" class="categories">
@@ -213,146 +602,102 @@
         Everything you need to learn, prepare and grow.
     </p>
 
-
     <div class="category-grid">
-
 
         <div class="category-card">
 
-            <div class="icon">
-                💼
-            </div>
+            <div class="icon">💼</div>
 
-            <h3>
-                Jobs & Internships
-            </h3>
+            <h3>Jobs & Internships</h3>
 
             <p>
                 Find job opportunities, internships and
                 career updates for students and freshers.
             </p>
 
-            <a href="#jobs">
-                Explore Jobs →
-            </a>
+            <a href="#jobs">Explore Jobs →</a>
 
         </div>
 
 
-
         <div class="category-card">
 
-            <div class="icon">
-                🎓
-            </div>
+            <div class="icon">🎓</div>
 
-            <h3>
-                Study & Notes
-            </h3>
+            <h3>Study & Notes</h3>
 
             <p>
                 Study resources, exam preparation,
                 notes and useful learning materials.
             </p>
 
-            <a href="#study">
-                Start Learning →
-            </a>
+            <a href="#study">Start Learning →</a>
 
         </div>
 
 
-
         <div class="category-card">
 
-            <div class="icon">
-                💻
-            </div>
+            <div class="icon">💻</div>
 
-            <h3>
-                Coding
-            </h3>
+            <h3>Coding</h3>
 
             <p>
                 Learn Java, Python, JavaScript,
                 HTML, CSS and web development.
             </p>
 
-            <a href="#coding">
-                Learn Coding →
-            </a>
+            <a href="#coding">Learn Coding →</a>
 
         </div>
 
 
-
         <div class="category-card">
 
-            <div class="icon">
-                🤖
-            </div>
+            <div class="icon">🤖</div>
 
-            <h3>
-                AI Tools
-            </h3>
+            <h3>AI Tools</h3>
 
             <p>
                 Discover useful AI tools for education,
                 productivity and career growth.
             </p>
 
-            <a href="#ai">
-                Explore AI →
-            </a>
+            <a href="#ai">Explore AI →</a>
 
         </div>
 
 
-
         <div class="category-card">
 
-            <div class="icon">
-                📄
-            </div>
+            <div class="icon">📄</div>
 
-            <h3>
-                Resume
-            </h3>
+            <h3>Resume</h3>
 
             <p>
                 Create professional resumes and
                 improve your chances of getting shortlisted.
             </p>
 
-            <a href="#resume">
-                Build Resume →
-            </a>
+            <a href="#resume">Build Resume →</a>
 
         </div>
 
 
-
         <div class="category-card">
 
-            <div class="icon">
-                🎤
-            </div>
+            <div class="icon">🎤</div>
 
-            <h3>
-                Interview Preparation
-            </h3>
+            <h3>Interview Preparation</h3>
 
             <p>
                 Practice HR questions, technical questions
                 and improve your communication.
             </p>
 
-            <a href="#interview">
-                Prepare Now →
-            </a>
+            <a href="#interview">Prepare Now →</a>
 
         </div>
-
 
     </div>
 
@@ -365,9 +710,7 @@
 
     <div class="section-heading">
 
-        <h2>
-            Latest Career Articles
-        </h2>
+        <h2>Latest Career Articles</h2>
 
         <p>
             Useful guides to help you learn and build your career.
@@ -379,19 +722,13 @@
     <div class="article-grid">
 
 
-        <!-- HR INTERVIEW -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🎤
-            </div>
+            <div class="article-icon">🎤</div>
 
             <div class="article-content">
 
-                <span>
-                    INTERVIEW
-                </span>
+                <span>INTERVIEW</span>
 
                 <h3>
                     Top HR Interview Questions for Freshers
@@ -411,19 +748,13 @@
         </article>
 
 
-        <!-- JAVA -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                💻
-            </div>
+            <div class="article-icon">💻</div>
 
             <div class="article-content">
 
-                <span>
-                    CODING
-                </span>
+                <span>CODING</span>
 
                 <h3>
                     Java Interview Questions for Freshers
@@ -443,19 +774,13 @@
         </article>
 
 
-        <!-- JAVA 2026 -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                ☕
-            </div>
+            <div class="article-icon">☕</div>
 
             <div class="article-content">
 
-                <span>
-                    JAVA INTERVIEW
-                </span>
+                <span>JAVA INTERVIEW</span>
 
                 <h3>
                     20 Java Interview Questions for Freshers in 2026
@@ -476,19 +801,13 @@
         </article>
 
 
-        <!-- SQL -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🗄️
-            </div>
+            <div class="article-icon">🗄️</div>
 
             <div class="article-content">
 
-                <span>
-                    SQL INTERVIEW
-                </span>
+                <span>SQL INTERVIEW</span>
 
                 <h3>
                     20 SQL Interview Questions for Freshers in 2026
@@ -509,19 +828,13 @@
         </article>
 
 
-        <!-- PYTHON -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🐍
-            </div>
+            <div class="article-icon">🐍</div>
 
             <div class="article-content">
 
-                <span>
-                    PYTHON INTERVIEW
-                </span>
+                <span>PYTHON INTERVIEW</span>
 
                 <h3>
                     20 Python Interview Questions for Freshers in 2026
@@ -542,19 +855,13 @@
         </article>
 
 
-        <!-- JAVASCRIPT -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🟨
-            </div>
+            <div class="article-icon">🟨</div>
 
             <div class="article-content">
 
-                <span>
-                    JAVASCRIPT INTERVIEW
-                </span>
+                <span>JAVASCRIPT INTERVIEW</span>
 
                 <h3>
                     20 JavaScript Interview Questions for Freshers in 2026
@@ -575,19 +882,13 @@
         </article>
 
 
-        <!-- HTML CSS -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🌐
-            </div>
+            <div class="article-icon">🌐</div>
 
             <div class="article-content">
 
-                <span>
-                    WEB DEVELOPMENT
-                </span>
+                <span>WEB DEVELOPMENT</span>
 
                 <h3>
                     20 HTML & CSS Interview Questions for Freshers in 2026
@@ -608,19 +909,13 @@
         </article>
 
 
-        <!-- REACT -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                ⚛️
-            </div>
+            <div class="article-icon">⚛️</div>
 
             <div class="article-content">
 
-                <span>
-                    REACT.JS INTERVIEW
-                </span>
+                <span>REACT.JS INTERVIEW</span>
 
                 <h3>
                     20 React.js Interview Questions for Freshers in 2026
@@ -640,19 +935,13 @@
         </article>
 
 
-        <!-- NODE JS -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🟢
-            </div>
+            <div class="article-icon">🟢</div>
 
             <div class="article-content">
 
-                <span>
-                    NODE.JS INTERVIEW
-                </span>
+                <span>NODE.JS INTERVIEW</span>
 
                 <h3>
                     20 Node.js Interview Questions for Freshers in 2026
@@ -673,19 +962,13 @@
         </article>
 
 
-        <!-- GIT & GITHUB -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🐙
-            </div>
+            <div class="article-icon">🐙</div>
 
             <div class="article-content">
 
-                <span>
-                    GIT & GITHUB
-                </span>
+                <span>GIT & GITHUB</span>
 
                 <h3>
                     20 Git & GitHub Interview Questions for Freshers in 2026
@@ -706,19 +989,13 @@
         </article>
 
 
-        <!-- AWS -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                ☁️
-            </div>
+            <div class="article-icon">☁️</div>
 
             <div class="article-content">
 
-                <span>
-                    AWS CLOUD
-                </span>
+                <span>AWS CLOUD</span>
 
                 <h3>
                     20 AWS Cloud Interview Questions for Freshers in 2026
@@ -738,19 +1015,13 @@
         </article>
 
 
-        <!-- PLACEMENT ELIGIBILITY CHECKER -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🎯
-            </div>
+            <div class="article-icon">🎯</div>
 
             <div class="article-content">
 
-                <span>
-                    PLACEMENT TOOLS
-                </span>
+                <span>PLACEMENT TOOLS</span>
 
                 <h3>
                     Placement Eligibility Checker
@@ -771,19 +1042,13 @@
         </article>
 
 
-        <!-- PLACEMENT PREPARATION ROADMAP -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🚀
-            </div>
+            <div class="article-icon">🚀</div>
 
             <div class="article-content">
 
-                <span>
-                    PLACEMENT TOOLS
-                </span>
+                <span>PLACEMENT TOOLS</span>
 
                 <h3>
                     Placement Preparation Roadmap 2026
@@ -803,19 +1068,13 @@
         </article>
 
 
-        <!-- AI TOOLS -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🤖
-            </div>
+            <div class="article-icon">🤖</div>
 
             <div class="article-content">
 
-                <span>
-                    AI TOOLS
-                </span>
+                <span>AI TOOLS</span>
 
                 <h3>
                     Best AI Tools for Students
@@ -835,19 +1094,13 @@
         </article>
 
 
-        <!-- RESUME -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                📄
-            </div>
+            <div class="article-icon">📄</div>
 
             <div class="article-content">
 
-                <span>
-                    RESUME
-                </span>
+                <span>RESUME</span>
 
                 <h3>
                     How to Create an ATS-Friendly Resume
@@ -867,19 +1120,13 @@
         </article>
 
 
-        <!-- CAREER SKILLS -->
-
         <article class="article-card">
 
-            <div class="article-icon">
-                🚀
-            </div>
+            <div class="article-icon">🚀</div>
 
             <div class="article-content">
 
-                <span>
-                    CAREER SKILLS
-                </span>
+                <span>CAREER SKILLS</span>
 
                 <h3>
                     20 Skills Freshers Should Learn in 2026
@@ -899,7 +1146,6 @@
 
         </article>
 
-
     </div>
 
 </section>
@@ -911,9 +1157,7 @@
 
     <div class="section-heading">
 
-        <h2>
-            Jobs & Internships
-        </h2>
+        <h2>Jobs & Internships</h2>
 
         <p>
             Find useful career opportunities for students
@@ -931,9 +1175,7 @@
 
     <div class="section-heading">
 
-        <h2>
-            Study & Notes
-        </h2>
+        <h2>Study & Notes</h2>
 
         <p>
             Improve your preparation with useful notes,
@@ -952,13 +1194,125 @@
     <div class="section-heading">
 
         <h2>
-            Learn Coding
+            Learn Coding & Programming
         </h2>
 
         <p>
-            Learn programming languages and web development
-            from beginner to advanced level.
+            Learn programming languages, databases, web development
+            and cloud technologies for interviews and career growth.
         </p>
+
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+            <div class="icon">☕</div>
+            <h3>Java Interview Questions</h3>
+            <p>
+                Prepare Core Java, OOPs, Collections and important
+                Java interview questions for freshers.
+            </p>
+            <a href="java-interview-questions-2026.html">
+                Learn Java →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🐍</div>
+            <h3>Python Interview Questions</h3>
+            <p>
+                Learn Python basics, functions, OOP, collections
+                and interview concepts.
+            </p>
+            <a href="python-interview-questions-2026.html">
+                Learn Python →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🟨</div>
+            <h3>JavaScript Interview Questions</h3>
+            <p>
+                Prepare variables, functions, arrays, DOM,
+                promises and JavaScript concepts.
+            </p>
+            <a href="javascript-interview-questions-2026.html">
+                Learn JavaScript →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">⚛️</div>
+            <h3>React.js Interview Questions</h3>
+            <p>
+                Learn components, JSX, props, state, hooks
+                and React.js concepts.
+            </p>
+            <a href="reactjs-interview-questions-2026.html">
+                Learn React.js →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🟢</div>
+            <h3>Node.js Interview Questions</h3>
+            <p>
+                Prepare Node.js, npm, modules, Event Loop,
+                REST APIs and asynchronous programming.
+            </p>
+            <a href="nodejs-interview-questions-2026.html">
+                Learn Node.js →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🗄️</div>
+            <h3>SQL Interview Questions</h3>
+            <p>
+                Practice SQL queries, JOINs, keys,
+                normalization and database concepts.
+            </p>
+            <a href="sql-interview-questions-2026.html">
+                Learn SQL →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🌐</div>
+            <h3>HTML & CSS Interview Questions</h3>
+            <p>
+                Learn HTML, CSS, Flexbox, Grid and
+                responsive web development.
+            </p>
+            <a href="html-css-interview-questions-2026.html">
+                Learn HTML & CSS →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">🐙</div>
+            <h3>Git & GitHub Interview Questions</h3>
+            <p>
+                Learn Git commands, branches, commits,
+                pull requests and GitHub workflows.
+            </p>
+            <a href="git-github-interview-questions-2026.html">
+                Learn Git & GitHub →
+            </a>
+        </div>
+
+        <div class="category-card">
+            <div class="icon">☁️</div>
+            <h3>AWS Cloud Interview Questions</h3>
+            <p>
+                Prepare AWS fundamentals including EC2,
+                S3, IAM, VPC, Lambda and RDS.
+            </p>
+            <a href="aws-cloud-interview-questions-2026.html">
+                Learn AWS Cloud →
+            </a>
+        </div>
 
     </div>
 
@@ -971,13 +1325,17 @@
 
     <div class="section-heading">
 
-        <h2>
-            AI Tools
-        </h2>
+        <h2>AI Tools for Students</h2>
 
         <p>
-            Explore useful AI tools for students,
-            developers and job seekers.
+            Explore useful AI tools for students, developers
+            and job seekers to improve learning and productivity.
+        </p>
+
+        <p>
+            <a href="ai-tools-for-students.html">
+                Explore AI Tools for Students →
+            </a>
         </p>
 
     </div>
@@ -991,9 +1349,7 @@
 
     <div class="section-heading">
 
-        <h2>
-            Resume & Career
-        </h2>
+        <h2>Resume & Career</h2>
 
         <p>
             Learn resume writing, ATS optimization and
@@ -1011,9 +1367,7 @@
 
     <div class="section-heading">
 
-        <h2>
-            Interview Preparation
-        </h2>
+        <h2>Interview Preparation</h2>
 
         <p>
             Prepare for HR interviews, technical interviews
@@ -1039,21 +1393,10 @@
 
     <div class="footer-links">
 
-        <a href="#">
-            About
-        </a>
-
-        <a href="#">
-            Contact
-        </a>
-
-        <a href="#">
-            Privacy Policy
-        </a>
-
-        <a href="#">
-            Disclaimer
-        </a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
 
     </div>
 
@@ -1064,29 +1407,340 @@
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= AI JAVASCRIPT ================= -->
 
 <script>
+
+const AI_WORKER_URL =
+    "https://studentcareerhub-ai.dwivediayush662.workers.dev/api/chat";
+
+let conversationHistory = [];
+
+
+/* ================= HERO SEARCH ================= */
 
 function searchContent() {
 
     const input =
-        document.getElementById("searchInput").value
-        .toLowerCase()
-        .trim();
+        document.getElementById("searchInput").value.trim();
 
-    if (input === "") {
+    if (!input) {
 
-        alert("Please enter something to search.");
+        alert("Please enter your question.");
 
         return;
     }
 
-    alert(
-        "Search feature is ready. We will connect it with articles in the next step."
-    );
+    document.getElementById("aiInput").value = input;
+
+    document
+        .getElementById("studentcareerhub-ai")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+    setTimeout(() => {
+
+        sendAIMessage();
+
+    }, 500);
+}
+
+
+/* ================= SUGGESTION ================= */
+
+function useSuggestion(text) {
+
+    document.getElementById("aiInput").value = text;
+
+    sendAIMessage();
 
 }
+
+
+/* ================= ADD MESSAGE ================= */
+
+function addMessage(role, text) {
+
+    const messages =
+        document.getElementById("aiMessages");
+
+    const welcome =
+        messages.querySelector(".ai-welcome");
+
+    if (welcome) {
+        welcome.remove();
+    }
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "ai-message " + role;
+
+    const bubble =
+        document.createElement("div");
+
+    bubble.className =
+        "message-bubble";
+
+    bubble.textContent = text;
+
+    message.appendChild(bubble);
+
+    messages.appendChild(message);
+
+    messages.scrollTop =
+        messages.scrollHeight;
+}
+
+
+/* ================= TYPING ================= */
+
+function showTyping() {
+
+    const messages =
+        document.getElementById("aiMessages");
+
+    const typing =
+        document.createElement("div");
+
+    typing.id = "aiTyping";
+
+    typing.className =
+        "ai-message assistant";
+
+    typing.innerHTML = `
+        <div class="message-bubble">
+            <div class="typing">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    `;
+
+    messages.appendChild(typing);
+
+    messages.scrollTop =
+        messages.scrollHeight;
+}
+
+
+function removeTyping() {
+
+    const typing =
+        document.getElementById("aiTyping");
+
+    if (typing) {
+        typing.remove();
+    }
+
+}
+
+
+/* ================= SEND AI MESSAGE ================= */
+
+async function sendAIMessage(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    const input =
+        document.getElementById("aiInput");
+
+    const sendButton =
+        document.getElementById("aiSendButton");
+
+    const text =
+        input.value.trim();
+
+    if (!text) {
+        return;
+    }
+
+    addMessage("user", text);
+
+    conversationHistory.push({
+        role: "user",
+        content: text
+    });
+
+    input.value = "";
+
+    sendButton.disabled = true;
+
+    sendButton.textContent = "Thinking...";
+
+    showTyping();
+
+
+    try {
+
+        const response =
+            await fetch(AI_WORKER_URL, {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    messages: conversationHistory
+                })
+
+            });
+
+
+        const data =
+            await response.json();
+
+
+        removeTyping();
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "AI service is temporarily unavailable."
+            );
+
+        }
+
+
+        const answer =
+            data.answer ||
+            "Sorry, I could not generate an answer.";
+
+
+        addMessage(
+            "assistant",
+            answer
+        );
+
+
+        conversationHistory.push({
+            role: "assistant",
+            content: answer
+        });
+
+
+    } catch (error) {
+
+        removeTyping();
+
+        addMessage(
+            "assistant",
+            "⚠️ " + error.message
+        );
+
+    }
+
+
+    sendButton.disabled = false;
+
+    sendButton.textContent = "Send";
+
+    input.focus();
+
+}
+
+
+/* ================= CLEAR CHAT ================= */
+
+function clearChat() {
+
+    conversationHistory = [];
+
+    const messages =
+        document.getElementById("aiMessages");
+
+    messages.innerHTML = `
+
+        <div class="ai-welcome">
+
+            <div class="ai-welcome-icon">
+                🤖
+            </div>
+
+            <h3>
+                How can I help you today?
+            </h3>
+
+            <p>
+                Ask me anything about your career, resume,
+                coding, interviews, study or English communication.
+            </p>
+
+            <div class="ai-suggestions">
+
+                <button
+                    class="ai-suggestion"
+                    onclick="useSuggestion('How should I prepare for a Java interview?')">
+                    ☕ Java Interview
+                </button>
+
+                <button
+                    class="ai-suggestion"
+                    onclick="useSuggestion('Create a 30-day placement preparation plan for me.')">
+                    🎯 Placement Plan
+                </button>
+
+                <button
+                    class="ai-suggestion"
+                    onclick="useSuggestion('How can I improve my English communication for interviews?')">
+                    🗣️ English
+                </button>
+
+                <button
+                    class="ai-suggestion"
+                    onclick="useSuggestion('How can I make my resume ATS friendly?')">
+                    📄 Resume
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+}
+
+
+/* ================= ENTER KEY ================= */
+
+document
+    .getElementById("aiInput")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            sendAIMessage();
+
+        }
+
+    });
+
+
+/* ================= HERO ENTER KEY ================= */
+
+document
+    .getElementById("searchInput")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            searchContent();
+
+        }
+
+    });
 
 </script>
 
