@@ -2,688 +2,578 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
 
-    <title>20 AWS Cloud Interview Questions for Freshers in 2026 | StudentCareerHub</title>
-
-    <meta name="description"
-        content="Prepare for AWS Cloud interviews with 20 important AWS interview questions and simple answers for freshers in 2026. Learn EC2, S3, IAM, VPC, Lambda, RDS, CloudWatch and more.">
-
-    <meta name="keywords"
-        content="AWS interview questions for freshers, AWS Cloud interview questions 2026, AWS questions and answers, EC2 interview questions, S3 interview questions">
-
+    <!-- SEO Meta Tags -->
+    <title>AWS Cloud Interview Questions 2026 | StudentCareerHub</title>
+    <meta name="description" content="Top 20 AWS Cloud interview questions and answers for freshers in 2026. Learn EC2, S3, IAM, VPC, Lambda, RDS, DynamoDB, and CloudWatch for cloud interviews.">
+    <meta name="keywords" content="AWS interview questions, AWS freshers 2026, EC2, S3, IAM, VPC, Lambda, RDS, DynamoDB, CloudWatch, cloud computing interview">
     <meta name="author" content="StudentCareerHub">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <meta name="robots" content="index, follow">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html">
 
-    <link rel="canonical"
-        href="https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html">
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:title" content="AWS Cloud Interview Questions 2026 | StudentCareerHub">
+    <meta property="og:description" content="Prepare for AWS interviews with 20 important questions covering EC2, S3, IAM, VPC, Lambda, RDS and CloudWatch.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html">
+    <meta property="og:site_name" content="StudentCareerHub">
+    <meta property="og:locale" content="en_IN">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AWS Cloud Interview Questions 2026 | StudentCareerHub">
+    <meta name="twitter:description" content="20 important AWS Cloud interview questions and answers for freshers and beginners.">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AWS Cloud Interview Questions 2026",
+      "description": "Top AWS Cloud interview questions and answers for freshers in 2026.",
+      "author": {
+        "@type": "Organization",
+        "name": "StudentCareerHub",
+        "url": "https://dwivediayush662-lang.github.io/studentcareerhub/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "StudentCareerHub",
+        "url": "https://dwivediayush662-lang.github.io/studentcareerhub/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html"
+      },
+      "datePublished": "2026-09-03",
+      "dateModified": "2026-09-26"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dwivediayush662-lang.github.io/studentcareerhub/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AWS Cloud Interview Questions 2026",
+        "item": "https://dwivediayush662-lang.github.io/studentcareerhub/aws-cloud-interview-questions-2026.html"
+      }]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AWS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AWS (Amazon Web Services) is a comprehensive cloud computing platform providing scalable services including computing, storage, networking, and databases over the internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a fresher learn first in AWS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beginners should start with basic cloud computing concepts, followed by core services like IAM (security), EC2 (compute), S3 (storage), VPC (networking), RDS (database), and Lambda (serverless)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AWS useful for software developers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Software developers use AWS to deploy microservices, store media, configure managed relational databases, run serverless APIs, and monitor application health."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are AWS certifications necessary for getting a job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certifications like AWS Certified Cloud Practitioner or Solutions Architect Associate validate foundational knowledge, but hands-on projects, architecture understanding, and interview prep are equally important."
+          }
+        }
+      ]
+    }
+    </script>
 
     <style>
-
-        .article-page {
-            max-width: 900px;
-            margin: auto;
-            padding: 70px 25px;
+        :root {
+            --primary-dark: #111827;
+            --brand-blue: #1e3a8a;
+            --accent-blue: #38bdf8;
+            --link-blue: #1d4ed8;
+            --bg-light: #f5f7fb;
+            --card-bg: #ffffff;
+            --text-dark: #222222;
         }
 
-        .article-header {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background: var(--primary-dark);
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--brand-blue));
+            color: white;
+            padding: 70px 8%;
             text-align: center;
-            margin-bottom: 45px;
         }
 
-        .article-category {
-            display: inline-block;
-            background: #fff7ed;
-            color: #c2410c;
-            padding: 7px 15px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 13px;
+        .hero h1 {
+            font-size: 42px;
             margin-bottom: 15px;
         }
 
-        .article-header h1 {
-            font-size: 45px;
-            line-height: 1.2;
-            margin-bottom: 18px;
-        }
-
-        .article-header p {
-            color: #667085;
+        .hero p {
+            max-width: 750px;
+            margin: auto;
             font-size: 18px;
         }
 
-        .article-content {
-            font-size: 17px;
-            line-height: 1.8;
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 7px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
         }
 
-        .article-content h2 {
-            font-size: 28px;
-            margin-top: 40px;
-            margin-bottom: 15px;
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .question {
-            background: #f8fafc;
-            border: 1px solid #e5e7eb;
+        .article-intro,
+        .question,
+        .faq,
+        .cta {
+            background: var(--card-bg);
+            padding: 25px;
+            margin-bottom: 22px;
             border-radius: 12px;
-            padding: 22px;
-            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
         }
 
-        .question h3 {
-            color: #172033;
-            margin-bottom: 10px;
+        .article-intro h2,
+        .question h2,
+        .faq h2,
+        .cta h2 {
+            color: var(--brand-blue);
+            margin-bottom: 12px;
         }
 
-        .question p {
-            color: #596579;
+        .question h2 {
+            font-size: 21px;
         }
 
-        .tip-box {
-            background: #fff7ed;
-            border-left: 5px solid #f97316;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 8px;
+        .question strong {
+            color: var(--primary-dark);
         }
 
-        .related-links {
-            background: #f8fafc;
+        .toc {
+            background: #eaf2ff;
             padding: 25px;
             border-radius: 12px;
-            margin-top: 45px;
+            margin-bottom: 30px;
         }
 
-        .related-links h2 {
-            margin-top: 0;
+        .toc h2 {
+            margin-bottom: 15px;
+            color: var(--brand-blue);
         }
 
-        .related-links a {
-            display: block;
-            margin: 10px 0;
-            color: #2563eb;
-            font-weight: 600;
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            list-style: none;
+        }
+
+        .toc-grid a {
+            color: var(--link-blue);
             text-decoration: none;
+            font-size: 15px;
         }
 
-        .back-button {
+        .toc-grid a:hover {
+            text-decoration: underline;
+        }
+
+        .cta {
+            text-align: center;
+            background: #e0f2fe;
+        }
+
+        .cta a {
             display: inline-block;
-            margin-top: 35px;
-            padding: 12px 20px;
-            background: #2563eb;
+            margin-top: 15px;
+            background: var(--link-blue);
             color: white;
-            text-decoration: none;
+            padding: 12px 22px;
             border-radius: 8px;
-            font-weight: 700;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        @media (max-width: 600px) {
+        .cta a:hover {
+            background: #1e40af;
+        }
 
-            .article-header h1 {
-                font-size: 32px;
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #93c5fd;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
             }
 
-            .article-content {
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
                 font-size: 16px;
             }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo">
+                Student<span>CareerHub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="java-interview-questions-2026.html">Java</a></li>
+                <li><a href="sql-interview-questions-2026.html">SQL</a></li>
+                <li><a href="reactjs-interview-questions-2026.html">React.js</a></li>
+                <li><a href="nodejs-interview-questions-2026.html">Node.js</a></li>
+                <li><a href="aws-cloud-interview-questions-2026.html">AWS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
+    <section class="hero">
+        <div class="badge">☁️ AWS Cloud Interview Preparation 2026</div>
+        <h1>AWS Cloud Interview Questions 2026</h1>
+        <p>
+            20 essential AWS Cloud interview questions and answers tailored for freshers, software developers, and aspiring cloud engineers.
+        </p>
+    </section>
 
-    <nav class="navbar">
+    <main class="container">
 
+        <section class="article-intro">
+            <h2>AWS Cloud Interview Questions for Freshers</h2>
+            <p>
+                AWS (Amazon Web Services) is the leading global cloud platform. Whether you are aiming for DevOps, Cloud Support, Backend Development, or Full-Stack roles, having a strong grasp of foundational AWS concepts is crucial for cracking technical interviews in 2026.
+            </p>
+            <p style="margin-top: 10px;">
+                This guide presents clear, beginner-friendly answers for 20 common interview questions covering EC2, S3, IAM, VPC, Lambda, RDS, DynamoDB, and CloudWatch.
+            </p>
+        </section>
+
+        <!-- Complete Table of Contents -->
+        <section class="toc">
+            <h2>📚 Quick Navigation (Jump to Questions)</h2>
+            <ul class="toc-grid">
+                <li><a href="#q1">1. What is AWS?</a></li>
+                <li><a href="#q2">2. What is Amazon EC2?</a></li>
+                <li><a href="#q3">3. What is Amazon S3?</a></li>
+                <li><a href="#q4">4. What is AWS IAM?</a></li>
+                <li><a href="#q5">5. What is Amazon VPC?</a></li>
+                <li><a href="#q6">6. What is AWS Lambda?</a></li>
+                <li><a href="#q7">7. What is Amazon RDS?</a></li>
+                <li><a href="#q8">8. What is Amazon CloudWatch?</a></li>
+                <li><a href="#q9">9. What is an AWS Region?</a></li>
+                <li><a href="#q10">10. What is an Availability Zone?</a></li>
+                <li><a href="#q11">11. What is an AMI?</a></li>
+                <li><a href="#q12">12. What is an S3 Bucket?</a></li>
+                <li><a href="#q13">13. What is a Security Group?</a></li>
+                <li><a href="#q14">14. What is an Elastic IP?</a></li>
+                <li><a href="#q15">15. What is Auto Scaling?</a></li>
+                <li><a href="#q16">16. What is Elastic Load Balancing?</a></li>
+                <li><a href="#q17">17. What is Amazon DynamoDB?</a></li>
+                <li><a href="#q18">18. What is AWS CloudFront?</a></li>
+                <li><a href="#q19">19. What is CloudFormation?</a></li>
+                <li><a href="#q20">20. Why learn AWS as a fresher?</a></li>
+            </ul>
+        </section>
+
+        <!-- Question List -->
+        <article class="question" id="q1">
+            <h2>1. What is AWS?</h2>
+            <p>
+                <strong>AWS (Amazon Web Services)</strong> is a leading cloud computing platform provided by Amazon. It offers scalable, pay-as-you-go services including virtual computing power, object and block storage, databases, networking, artificial intelligence, and security over the internet.
+            </p>
+        </article>
+
+        <article class="question" id="q2">
+            <h2>2. What is Amazon EC2?</h2>
+            <p>
+                <strong>Amazon EC2 (Elastic Compute Cloud)</strong> provides scalable virtual servers in the cloud called "instances." It allows developers to run applications, scale computing capacity up or down depending on traffic demands, and configure custom OS and hardware specifications.
+            </p>
+        </article>
+
+        <article class="question" id="q3">
+            <h2>3. What is Amazon S3?</h2>
+            <p>
+                <strong>Amazon S3 (Simple Storage Service)</strong> is an object storage service designed to store and retrieve any amount of data from anywhere. It offers high durability (99.999999999%), scalability, and availability, making it ideal for storing images, documents, application backups, and static website hosting.
+            </p>
+        </article>
+
+        <article class="question" id="q4">
+            <h2>4. What is AWS IAM?</h2>
+            <p>
+                <strong>AWS IAM (Identity and Access Management)</strong> is a security service that enables administrators to securely control access to AWS resources. IAM allows you to manage users, groups, roles, and granular permissions using policies to follow the Principle of Least Privilege.
+            </p>
+        </article>
+
+        <article class="question" id="q5">
+            <h2>5. What is Amazon VPC?</h2>
+            <p>
+                <strong>Amazon VPC (Virtual Private Cloud)</strong> allows you to launch AWS resources in a logically isolated virtual network defined by you. You have complete control over your virtual networking environment, including setting up subnets, IP ranges, route tables, and network gateways.
+            </p>
+        </article>
+
+        <article class="question" id="q6">
+            <h2>6. What is AWS Lambda?</h2>
+            <p>
+                <strong>AWS Lambda</strong> is a event-driven, serverless compute service that runs code automatically in response to triggers (such as S3 uploads or HTTP API requests) without needing to provision, manage, or scale servers.
+            </p>
+        </article>
+
+        <article class="question" id="q7">
+            <h2>7. What is Amazon RDS?</h2>
+            <p>
+                <strong>Amazon RDS (Relational Database Service)</strong> is a managed database service that makes it easy to set up, operate, and scale relational databases in the cloud. It supports engines like MySQL, PostgreSQL, MariaDB, Oracle, and Microsoft SQL Server.
+            </p>
+        </article>
+
+        <article class="question" id="q8">
+            <h2>8. What is Amazon CloudWatch?</h2>
+            <p>
+                <strong>Amazon CloudWatch</strong> is a monitoring and observability service that collects operational data in the form of logs, metrics, and events. It helps track resource utilization, respond to system-wide performance changes, and set automated alarms.
+            </p>
+        </article>
+
+        <article class="question" id="q9">
+            <h2>9. What is an AWS Region?</h2>
+            <p>
+                An <strong>AWS Region</strong> is a distinct physical geographical location in the world that contains multiple isolated data centers called Availability Zones. Examples include us-east-1 (N. Virginia) and ap-south-1 (Mumbai).
+            </p>
+        </article>
+
+        <article class="question" id="q10">
+            <h2>10. What is an Availability Zone (AZ)?</h2>
+            <p>
+                An <strong>Availability Zone (AZ)</strong> consists of one or more discrete data centers with independent power, cooling, and networking within an AWS Region. AZs are interconnected with high-speed, low-latency private networking to provide high availability and redundancy.
+            </p>
+        </article>
+
+        <article class="question" id="q11">
+            <h2>11. What is an AMI in AWS?</h2>
+            <p>
+                An <strong>AMI (Amazon Machine Image)</strong> is a pre-configured template containing the operating system, application server, and software required to launch an EC2 instance.
+            </p>
+        </article>
+
+        <article class="question" id="q12">
+            <h2>12. What is an S3 Bucket?</h2>
+            <p>
+                An <strong>S3 Bucket</strong> is a top-level container for storing objects in Amazon S3. Every object (file) resides inside a bucket, and bucket names must be globally unique across all AWS accounts worldwide.
+            </p>
+        </article>
+
+        <article class="question" id="q13">
+            <h2>13. What is an AWS Security Group?</h2>
+            <p>
+                A <strong>Security Group</strong> acts as a virtual stateful firewall for EC2 instances to control incoming and outgoing network traffic at the instance level.
+            </p>
+        </article>
+
+        <article class="question" id="q14">
+            <h2>14. What is an Elastic IP address?</h2>
+            <p>
+                An <strong>Elastic IP address</strong> is a static, public IPv4 address assigned to an AWS account. Unlike standard dynamic IPs, an Elastic IP remains persistent even if an EC2 instance is stopped and restarted.
+            </p>
+        </article>
+
+        <article class="question" id="q15">
+            <h2>15. What is AWS Auto Scaling?</h2>
+            <p>
+                <strong>AWS Auto Scaling</strong> monitors your applications and automatically adjusts computing capacity (adding or removing EC2 instances) to maintain steady, predictable performance at the lowest possible cost.
+            </p>
+        </article>
+
+        <article class="question" id="q16">
+            <h2>16. What is Elastic Load Balancing (ELB)?</h2>
+            <p>
+                <strong>Elastic Load Balancing (ELB)</strong> automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses, across multiple Availability Zones.
+            </p>
+        </article>
+
+        <article class="question" id="q17">
+            <h2>17. What is Amazon DynamoDB?</h2>
+            <p>
+                <strong>Amazon DynamoDB</strong> is a fully managed, serverless NoSQL database service that provides single-digit millisecond response times at any scale with seamless multi-region replication.
+            </p>
+        </article>
+
+        <article class="question" id="q18">
+            <h2>18. What is AWS CloudFront?</h2>
+            <p>
+                <strong>Amazon CloudFront</strong> is a Content Delivery Network (CDN) service that speeds up the delivery of static and dynamic web content (like .html, .css, images, and videos) to users worldwide via edge locations.
+            </p>
+        </article>
+
+        <article class="question" id="q19">
+            <h2>19. What is AWS CloudFormation?</h2>
+            <p>
+                <strong>AWS CloudFormation</strong> is an Infrastructure-as-Code (IaC) service that allows developers to model, provision, and manage entire AWS infrastructure stacks using JSON or YAML templates.
+            </p>
+        </article>
+
+        <article class="question" id="q20">
+            <h2>20. Why should freshers learn AWS?</h2>
+            <p>
+                Learning AWS gives freshers an edge in modern software development. It equips students with practical understanding of cloud deployment, serverless architectures, cloud security, and scalable system design—skills heavily sought after by IT companies and startups.
+            </p>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div style="margin-top: 15px;">
+                <h3>What is AWS?</h3>
+                <p>AWS is Amazon's cloud computing platform providing scalable computing, storage, database, and networking services.</p>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3>What should a fresher learn first in AWS?</h3>
+                <p>Beginners should start with basic cloud fundamentals, followed by IAM, EC2, S3, VPC, RDS, and Lambda.</p>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3>Is AWS useful for software developers?</h3>
+                <p>Yes. Software developers use AWS to deploy apps, manage databases, run serverless logic, and build backend microservices.</p>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3>Are AWS certifications necessary for getting a job?</h3>
+                <p>Certifications help demonstrate cloud literacy, but practical projects and solid core fundamentals carry equal weight in interviews.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>🚀 Continue Your Placement Preparation</h2>
+            <p>Explore more technical and HR interview guides on StudentCareerHub.</p>
+            <a href="index.html">← Back to StudentCareerHub</a>
+        </section>
+
+    </main>
+
+    <footer>
         <div class="logo">
             Student<span>CareerHub</span>
         </div>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="index.html#jobs">Jobs</a>
-            </li>
-
-            <li>
-                <a href="index.html#study">Study</a>
-            </li>
-
-            <li>
-                <a href="index.html#coding">Coding</a>
-            </li>
-
-            <li>
-                <a href="index.html#ai">AI Tools</a>
-            </li>
-
-            <li>
-                <a href="index.html#resume">Resume</a>
-            </li>
-
-            <li>
-                <a href="index.html#interview">Interview</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
-
-<main class="article-page">
-
-
-    <div class="article-header">
-
-        <span class="article-category">
-            AWS CLOUD INTERVIEW
-        </span>
-
-        <h1>
-            20 AWS Cloud Interview Questions for Freshers in 2026
-        </h1>
-
-        <p>
-            Prepare for AWS Cloud interviews with important
-            questions, simple answers and practical concepts.
+        <p>Learn • Prepare • Grow</p>
+        <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
+            © 2026 StudentCareerHub. All Rights Reserved.
         </p>
-
-    </div>
-
-
-
-    <div class="article-content">
-
-
-        <p>
-            Amazon Web Services (AWS) is a cloud computing platform
-            that provides infrastructure, storage, databases,
-            networking, security, serverless computing and many
-            other services. AWS fundamentals are useful for freshers
-            preparing for cloud and software development roles.
-        </p>
-
-
-        <div class="tip-box">
-
-            <strong>Interview Tip:</strong>
-
-            Don't try to memorize hundreds of AWS services.
-            Start with core services such as EC2, S3, IAM, VPC,
-            RDS, Lambda and CloudWatch.
-
-        </div>
-
-
-
-        <h2>1. What is Cloud Computing?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Cloud computing is a model for accessing computing
-                resources such as servers, storage, databases and
-                networking over a network, typically on demand.
-            </p>
-
-        </div>
-
-
-
-        <h2>2. What is AWS?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                AWS, or Amazon Web Services, is a cloud platform
-                that provides a large collection of infrastructure,
-                platform and managed services.
-            </p>
-
-        </div>
-
-
-
-        <h2>3. What is an AWS Region?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                An AWS Region is a geographic area containing
-                multiple AWS Availability Zones. Customers choose
-                regions based on factors such as latency,
-                requirements and service availability.
-            </p>
-
-        </div>
-
-
-
-        <h2>4. What is an Availability Zone?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                An Availability Zone is an isolated location within
-                an AWS Region that contains one or more data centers.
-                Multiple Availability Zones help applications improve
-                resilience and availability.
-            </p>
-
-        </div>
-
-
-
-        <h2>5. What is Amazon EC2?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon EC2 provides resizable compute capacity in
-                the cloud. It allows users to run virtual servers
-                called instances.
-            </p>
-
-        </div>
-
-
-
-        <h2>6. What is Amazon S3?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon S3 is an object storage service used to store
-                and retrieve data such as files, images, documents
-                and backups.
-            </p>
-
-        </div>
-
-
-
-        <h2>7. What is IAM?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                AWS Identity and Access Management (IAM) helps
-                control authentication and authorization for AWS
-                resources. IAM policies can define what actions
-                identities are allowed or denied.
-            </p>
-
-        </div>
-
-
-
-        <h2>8. What is Amazon VPC?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon VPC allows users to create a logically
-                isolated virtual network in AWS. It can contain
-                subnets, route tables, gateways and other networking
-                components.
-            </p>
-
-        </div>
-
-
-
-        <h2>9. What is a Security Group?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                A security group acts as a virtual firewall for
-                supported AWS resources such as EC2 instances.
-                It controls allowed inbound and outbound network
-                traffic using rules.
-            </p>
-
-        </div>
-
-
-
-        <h2>10. What is Elastic Load Balancing?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Elastic Load Balancing distributes incoming
-                application traffic across multiple targets such
-                as EC2 instances. It can help improve availability
-                and scalability.
-            </p>
-
-        </div>
-
-
-
-        <h2>11. What is Auto Scaling?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                AWS Auto Scaling can automatically adjust resources
-                according to configured conditions or demand.
-                Amazon EC2 Auto Scaling, for example, can maintain
-                the desired number of instances in an Auto Scaling
-                group.
-            </p>
-
-        </div>
-
-
-
-        <h2>12. What is Amazon CloudFront?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon CloudFront is a content delivery network
-                service that distributes content through a global
-                network of edge locations to reduce latency for
-                users.
-            </p>
-
-        </div>
-
-
-
-        <h2>13. What is Amazon Route 53?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon Route 53 is a highly available and scalable
-                DNS and domain management service. It can route
-                users to applications and other resources.
-            </p>
-
-        </div>
-
-
-
-        <h2>14. What is Amazon RDS?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon RDS is a managed relational database service.
-                It simplifies tasks such as database setup,
-                backups, patching and scaling for supported database
-                engines.
-            </p>
-
-        </div>
-
-
-
-        <h2>15. What is DynamoDB?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon DynamoDB is a managed NoSQL database service
-                designed to provide fast and predictable performance
-                at scale.
-            </p>
-
-        </div>
-
-
-
-        <h2>16. What is AWS Lambda?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                AWS Lambda is a serverless compute service that runs
-                code in response to events without requiring the
-                developer to manage servers directly.
-            </p>
-
-        </div>
-
-
-
-        <h2>17. What is Amazon EBS?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon Elastic Block Store (EBS) provides persistent
-                block storage volumes that can be attached to
-                supported compute instances such as EC2.
-            </p>
-
-        </div>
-
-
-
-        <h2>18. What is Amazon CloudWatch?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Amazon CloudWatch is a monitoring and observability
-                service that can collect metrics, logs and other
-                monitoring information from AWS resources and
-                applications.
-            </p>
-
-        </div>
-
-
-
-        <h2>19. What is the difference between scalability and elasticity?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                Scalability refers to the ability of a system to
-                handle increased workload by adding resources.
-                Elasticity refers to automatically adjusting
-                resources up or down as demand changes.
-            </p>
-
-        </div>
-
-
-
-        <h2>20. Why is AWS important for freshers?</h2>
-
-        <div class="question">
-
-            <h3>Answer</h3>
-
-            <p>
-                AWS knowledge is useful because cloud services are
-                widely used for hosting applications, storing data,
-                networking, monitoring and deploying software.
-                Understanding core AWS services can help freshers
-                prepare for cloud, DevOps and software development
-                roles.
-            </p>
-
-        </div>
-
-
-
-        <h2>AWS Interview Preparation Tips</h2>
-
-        <div class="question">
-
-            <p>
-                ✔ Learn the basics of cloud computing.<br>
-                ✔ Understand EC2 and S3 clearly.<br>
-                ✔ Practice IAM permissions and policies.<br>
-                ✔ Learn VPC basics and networking concepts.<br>
-                ✔ Understand load balancing and Auto Scaling.<br>
-                ✔ Learn the basics of RDS and DynamoDB.<br>
-                ✔ Understand serverless computing with Lambda.<br>
-                ✔ Learn CloudWatch monitoring basics.<br>
-                ✔ Try simple AWS hands-on projects.
-            </p>
-
-        </div>
-
-
-
-        <div class="related-links">
-
-            <h2>More StudentCareerHub Guides</h2>
-
-            <!-- NEW PLACEMENT ELIGIBILITY CHECKER LINK -->
-            <a href="placement-eligibility-checker.html">
-                🎯 Placement Eligibility Checker →
-            </a>
-
-            <a href="git-github-interview-questions-2026.html">
-                🐙 20 Git & GitHub Interview Questions for Freshers →
-            </a>
-
-            <a href="nodejs-interview-questions-2026.html">
-                🟢 20 Node.js Interview Questions for Freshers →
-            </a>
-
-            <a href="reactjs-interview-questions-2026.html">
-                ⚛️ 20 React.js Interview Questions for Freshers →
-            </a>
-
-            <a href="javascript-interview-questions-2026.html">
-                🟨 20 JavaScript Interview Questions for Freshers →
-            </a>
-
-            <a href="sql-interview-questions-2026.html">
-                🗄️ 20 SQL Interview Questions for Freshers →
-            </a>
-
-            <a href="java-interview-questions.html">
-                ☕ Java Interview Questions for Freshers →
-            </a>
-
-            <a href="hr-interview-questions.html">
-                🎤 HR Interview Questions for Freshers →
-            </a>
-
-            <a href="skills-for-freshers-2026.html">
-                🚀 20 Skills Freshers Should Learn in 2026 →
-            </a>
-
-            <a href="ats-friendly-resume.html">
-                📄 ATS-Friendly Resume Guide →
-            </a>
-
-            <a href="index.html">
-                🏠 Explore StudentCareerHub →
-            </a>
-
-        </div>
-
-
-
-        <a href="index.html" class="back-button">
-            ← Back to StudentCareerHub
-        </a>
-
-
-    </div>
-
-</main>
-
-
-
-<footer>
-
-    <div class="footer-logo">
-        Student<span>CareerHub</span>
-    </div>
-
-    <p>
-        Learn • Prepare • Grow
-    </p>
-
-    <div class="footer-links">
-
-        <a href="index.html">Home</a>
-
-        <a href="#">About</a>
-
-        <a href="#">Contact</a>
-
-        <a href="#">Privacy Policy</a>
-
-    </div>
-
-    <p class="copyright">
-        © 2026 StudentCareerHub. All Rights Reserved.
-    </p>
-
-</footer>
-
+    </footer>
 
 </body>
 
